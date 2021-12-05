@@ -21,6 +21,10 @@ public async salvarTicket (req:Request,res:Response){
  public async obtenerticket(req:Request,res:Response){
         const tocket=await tickets.find();
        res.json(tocket);
+ };
+ public async obtenerticketbyemail(req:Request,res:Response){
+            const tocket=await tickets.find({correo:req.body.correo});
+            res.json(tocket);
  }
  }
 const ticket = new IndexWelcome();

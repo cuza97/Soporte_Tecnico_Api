@@ -12,6 +12,7 @@ class index {
     this.router.get("/", indexcontroller.index);
     this.router.post("/uploadticket", ticket.salvarTicket);
     this.router.get("/geticket", ticket.obtenerticket);
+    this.router.get("/geticketbyemail", ticket.obtenerticketbyemail);
     
   }
 }
